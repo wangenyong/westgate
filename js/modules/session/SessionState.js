@@ -1,3 +1,7 @@
+/**
+ * @flow
+ */
+
 import {Map} from 'immutable';
 
 export const RESET_STATE = 'SessionState/RESET';
