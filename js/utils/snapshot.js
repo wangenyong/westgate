@@ -1,5 +1,5 @@
-var { AsyncStorage } = require('react-native');
-var { fromJS } = require('immutable');
+import {AsyncStorage} from 'react-native';
+import {fromJS} from 'immutable';
 const STATE_STORAGE_KEY = 'WestGateAppState:Latest';
 
 export async function resetSnapshot() {
