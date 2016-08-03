@@ -2,6 +2,8 @@
  * @flow
  */
 
+'use strict'
+
 import React, {PropTypes} from 'react';
 import {
   View,
@@ -21,7 +23,7 @@ const NavigationView = React.createClass({
     switchTab: PropTypes.func.isRequired
   },
 
-  render() {
+  render: function() {
     const {routes, index} = this.props.navigationState;
     const tabs = routes.map((tabState, tabIndex) => {
       return (
