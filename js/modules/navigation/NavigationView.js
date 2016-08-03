@@ -7,7 +7,7 @@ import {
   View,
   StyleSheet
 } from 'react-native';
-import AppRouter from '../AppRouter';
+import AppRouter from './AppRouter';
 import NavigationTabView from './NavigationTabView';
 import TabBar from '../../components/TabBar';
 
