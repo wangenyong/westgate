@@ -15,7 +15,6 @@ const TAB_BAR_HEIGHT = 50;
 
 const NavigationView = React.createClass({
   propTypes: {
-    router: PropTypes.func.isRequired,
     navigationState: PropTypes.object.isRequired,
     onNavigateBack: PropTypes.func.isRequired,
     onNavigateCompleted: PropTypes.func.isRequired,
