@@ -27,4 +27,4 @@ var styles = StyleSheet.create({
   }
 })
 
-module.exports = TabView;
+export default TabView;
