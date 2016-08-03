@@ -15,6 +15,7 @@ import {
 import * as snapshotUtil from './utils/snapshot';
 import * as SessionStateActions from './modules/session/SessionState';
 import store from './redux/store';
+import NavigationViewContainer from './modules/navigation/NavigationViewContainer';
 
 const Setup = React.createClass({
   PropTypes: {
@@ -39,8 +40,15 @@ const Setup = React.createClass({
   },
 
   render: function() {
+    if (!this.props.isReady) {
+      return (
+        <View><ActivityIndicator style={styles.container} /></View>
+      )
+    }
     return (
-      <View style={styles.container}><Text>Setup</Text></View>
+      <View style={{flex: 1}}>
+        <NavigationViewContainer />
+      </View>
     )
   }
 })

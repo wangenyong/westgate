@@ -1,8 +1,15 @@
+/**
+ * @flow
+ */
+
+'use strict'
+
 import React, {PropTypes} from 'react';
 import {
   Animated,
   NavigationExperimental as Navigation
 } from 'react-native';
+import TabView from '../../components/TabView';
 
 const NavigationTabView = React.createClass({
   propTypes: {
@@ -17,7 +24,7 @@ const NavigationTabView = React.createClass({
     return {shouldRenderHeader: true};
   },
 
-  renderHeader: function(props) {
+  renderHeader: function(props: any) {
     return (
       <Navigation.Header
         {...props}
@@ -27,7 +34,7 @@ const NavigationTabView = React.createClass({
     );
   },
 
-  renderScene: function(props) {
+  renderScene: function(props: any) {
     return (
       <Navigation.Card
         {...props}
@@ -40,20 +47,11 @@ const NavigationTabView = React.createClass({
 
   render: function() {
     return (
-      <Navigation.AnimatedView
+      <Navigation.CardStack
         style={{flex: 1}}
         navigationState={this.props.navigationState}
         renderOverlay={this.props.shouldRenderHeader ? this.renderHeader : null}
         renderScene={this.renderScene}
-        applyAnimation={(pos, navState) => {
-          // This is the default animation. We redefine it here to be
-          // able to attach a onComplete handler
-          Animated
-            .spring(pos, {toValue: navState.index, bounciness: 0})
-            .start(() => {
-              this.props.onNavigateCompleted();
-            });
-        }}
       />
     );
   }

@@ -1,6 +1,7 @@
 /*eslint-disable react/prop-types*/
 
 import React from 'react';
+import TabView from '../../components/TabView';
 
 /**
  * AppRouter is responsible for mapping a navigator scene to a view
@@ -8,6 +9,7 @@ import React from 'react';
 export default function AppRouter(props) {
   const key = props.scene.route.key;
 
+  return <TabView title={key} />
 
   throw new Error('Unknown navigation key: ' + key);
 }

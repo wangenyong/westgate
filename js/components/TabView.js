@@ -4,7 +4,7 @@
 
 'use strict';
 
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import {
    StyleSheet,
    Text,
@@ -12,9 +12,13 @@ import {
 } from 'react-native';
 
 const TabView = React.createClass({
+  propTypes: {
+    title: PropTypes.string.isRequired
+  },
+
   render: function() {
     return (
-      <View style={styles.container}><Text>TabView!</Text></View>
+      <View style={styles.container}><Text>{this.props.title}</Text></View>
     )
   }
 })
