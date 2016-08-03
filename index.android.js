@@ -3,6 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+'use strict'
 
 import 'es6-symbol/implement';
 import {Provider} from 'react-redux';

@@ -3,6 +3,8 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+'use strict'
+
 import {Provider} from 'react-redux';
 import store from './js/redux/store';
 import Setup from './js/setup';
