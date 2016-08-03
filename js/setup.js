@@ -40,7 +40,7 @@ const Setup = React.createClass({
 
   render: function() {
     return (
-      <View style={styles.container}><Text>Setup!</Text></View>
+      <View style={styles.container}><Text>Setup</Text></View>
     )
   }
 })
