@@ -1,8 +1,13 @@
 import {Map} from 'immutable';
 import {combineReducers} from 'redux-loop';
+import NavigationStateReducer from '../modules/navigation/NavigationState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 
 const reducers = {
+
+  // @NOTE: By convention, the navigation state must live in a subtree called
+  //`navigationState`
+  navigationState: NavigationStateReducer,
 
   session: SessionStateReducer
 
