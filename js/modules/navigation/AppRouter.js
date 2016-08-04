@@ -9,7 +9,7 @@ import TabView from '../../components/TabView';
 export default function AppRouter(props) {
   const key = props.scene.route.key;
 
-  return <TabView title={key} />
+  return <TabView title={props.scene.route.title} />
 
   throw new Error('Unknown navigation key: ' + key);
 }

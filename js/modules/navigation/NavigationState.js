@@ -34,8 +34,8 @@ export function navigationCompleted() {
 
 const initialState = fromJS(
   createNavigationState('MainNavigation', 'App', [
-    createNavigationState('Tab1', 'Tab1', [{key: 'Tab1-1', title: 'Tab1-1'}]),
-    createNavigationState('Tab2', 'Tab2', [{key: 'Tab2-1', title: 'Tab2-1'}])
+    createNavigationState('Tab1', 'Tab1', [{key: 'Tab1-1', title: '标签1-1'}]),
+    createNavigationState('Tab2', 'Tab2', [{key: 'Tab2-1', title: '标签2-1'}])
   ]));
 
 export default function NavigationReducer(state = initialState, action) {

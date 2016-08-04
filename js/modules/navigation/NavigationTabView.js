@@ -28,7 +28,7 @@ const NavigationTabView = React.createClass({
       <Navigation.Header
         {...props}
         onNavigateBack={this.props.onNavigateBack}
-        getTitle={state => state.key}
+        getTitle={state => state.title}
       />
     );
   },

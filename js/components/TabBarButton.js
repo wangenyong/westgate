@@ -23,6 +23,7 @@ export default React.createClass({
       <TouchableOpacity
         onPress={this.props.action}
         style={[styles.button, this.props.isSelected && styles.selected]}
+        activeOpacity={1}
         >
         <Text>{this.props.text}</Text>
       </TouchableOpacity>
