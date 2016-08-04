@@ -18,9 +18,7 @@ export function pushRoute(state) {
   return (dispatch, getState) => {
     // conditionally execute push to avoid double
     // navigations due to impatient users
-    if (!isNavigationAnimationInProgress(getState())) {
-      dispatch({type: PUSH_ROUTE, payload: state});
-    }
+    dispatch({type: PUSH_ROUTE, payload: state});
   };
 }
 
@@ -43,7 +41,6 @@ export default function NavigationReducer(state = initialState, action) {
   switch (action.type) {
     case PUSH_ROUTE:
       return state
-        .set('isNavigating', true)
         .updateIn(['routes', state.get('index')], tabState =>
           tabState
             .update('routes', routes => routes.push(fromJS(action.payload)))
@@ -51,7 +48,6 @@ export default function NavigationReducer(state = initialState, action) {
 
     case POP_ROUTE:
       return state
-        .set('isNavigating', true)
         .updateIn(['routes', state.get('index')], tabState =>
           tabState
             .update('routes', routes => routes.pop())
@@ -59,9 +55,6 @@ export default function NavigationReducer(state = initialState, action) {
 
     case SWITCH_TAB:
       return state.set('index', action.payload);
-
-    case NAVIGATION_COMPLETED:
-      return state.set('isNavigating', false);
 
     default:
       return state;
@@ -77,8 +70,4 @@ function createNavigationState(key, title, routes) {
     index: 0,
     routes
   };
-}
-
-function isNavigationAnimationInProgress(state) {
-  return state.getIn(['navigationState', 'isNavigating']);
 }

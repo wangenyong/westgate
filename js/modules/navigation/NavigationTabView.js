@@ -15,7 +15,6 @@ const NavigationTabView = React.createClass({
     router: PropTypes.func.isRequired,
     navigationState: PropTypes.object.isRequired,
     onNavigateBack: PropTypes.func.isRequired,
-    onNavigateCompleted: PropTypes.func.isRequired,
     shouldRenderHeader: PropTypes.bool
   },
 

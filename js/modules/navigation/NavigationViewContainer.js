@@ -12,9 +12,6 @@ export default connect(
     },
     onNavigateBack() {
       dispatch(popRoute());
-    },
-    onNavigateCompleted() {
-      dispatch(navigationCompleted());
     }
   })
 )(NavigationView);
