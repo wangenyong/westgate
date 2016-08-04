@@ -9,7 +9,6 @@ import {
   Animated,
   NavigationExperimental as Navigation
 } from 'react-native';
-import TabView from '../../components/TabView';
 
 const NavigationTabView = React.createClass({
   propTypes: {
@@ -25,6 +24,7 @@ const NavigationTabView = React.createClass({
   },
 
   renderHeader: function(props: any) {
+    console.log(props);
     return (
       <Navigation.Header
         {...props}
