@@ -42,7 +42,7 @@ const Setup = React.createClass({
   render: function() {
     if (!this.props.isReady) {
       return (
-        <View><ActivityIndicator style={styles.container} /></View>
+        <View style={styles.container}><ActivityIndicator /></View>
       )
     }
     return (
