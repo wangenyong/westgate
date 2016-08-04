@@ -24,7 +24,6 @@ const NavigationTabView = React.createClass({
   },
 
   renderHeader: function(props: any) {
-    console.log(props);
     return (
       <Navigation.Header
         {...props}
