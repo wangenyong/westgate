@@ -27,12 +27,16 @@ const Setup = React.createClass({
     snapshotUtil.resetSnapshot()
       .then(snapshot => {
         const {dispatch} = this.props;
+        console.log(snapshot);
+        dispatch(SessionStateActions.initializeSessionState());
+
+        /**
         if (snapshot) {
           dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
         } else {
           dispatch(SessionStateActions.initializeSessionState());
         }
-
+        */
         store.subscribe(() => {
           snapshotUtil.saveSnapshot(store.getState());
         });
