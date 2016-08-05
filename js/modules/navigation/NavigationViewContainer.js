@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {popRoute, switchTab, navigationCompleted} from './NavigationState';
+import {popRoute, switchTab} from './NavigationState';
 import NavigationView from './NavigationView';
 
 export default connect(

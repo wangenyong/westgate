@@ -38,6 +38,7 @@ const NavigationTabView = React.createClass({
         {...props}
         key={props.scene.route.key}
         renderScene={this.props.router}
+        onNavigateBack={this.props.onNavigateBack}
       />
     );
   },
@@ -47,7 +48,6 @@ const NavigationTabView = React.createClass({
       <Navigation.CardStack
         style={{flex: 1}}
         navigationState={this.props.navigationState}
-        onNavigateBack={this.props.onNavigateBack}
         renderOverlay={this.props.shouldRenderHeader ? this.renderHeader : null}
         renderScene={this.renderScene}
       />

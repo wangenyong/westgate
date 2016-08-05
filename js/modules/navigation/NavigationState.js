@@ -26,9 +26,6 @@ export function popRoute() {
   return {type: POP_ROUTE};
 }
 
-export function navigationCompleted() {
-  return {type: NAVIGATION_COMPLETED};
-}
 
 const initialState = fromJS(
   createNavigationState('MainNavigation', 'App', [
