@@ -21,7 +21,7 @@ const TabView = React.createClass({
 
   hello: function() {
     console.log("hello click!");
-    this.props.dispatch(NavigationState.pushRoute({key: 'hello'}));
+    this.props.dispatch(NavigationState.pushRoute({key: 'hello', title: 'Hello'}));
   },
 
   render: function() {
