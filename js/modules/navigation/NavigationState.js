@@ -30,22 +30,42 @@ const initialState = fromJS({
   tabs: {
     index: 0,
     routes: [
-      {key: 'Tab1', title: 'Apple'},
-      {key: 'Tab2', title: 'Banana'},
-      {key: 'Tab3', title: 'Orange'},
+      {key: 'HomeTab', title: 'Home'},
+      {key: 'ListTab', title: 'List'},
+      {key: 'GridTab', title: 'Grid'},
+      {key: 'ProfileTab', title: 'Profile'},
+      {key: 'MoreTab', title: 'More'}
     ]
   },
-  Tab1: {
+  HomeTab: {
     index: 0,
+    iconName: 'ios-home-outline',
+    selectedIconName: 'ios-home',
     routes: [{key: 'Apple', title: '苹果'}]
   },
-  Tab2: {
+  ListTab: {
     index: 0,
+    iconName: 'ios-list-outline',
+    selectedIconName: 'ios-list',
     routes: [{key: 'Banana', title: '香蕉'}]
   },
-  Tab3: {
+  GridTab: {
     index: 0,
+    iconName: 'ios-grid-outline',
+    selectedIconName: 'ios-grid',
     routes: [{key: 'Orange', title: '橘子'}]
+  },
+  ProfileTab: {
+    index: 0,
+    iconName: 'ios-profile-outline',
+    selectedIconName: 'ios-profile',
+    routes: [{key: 'Grape', title: '葡萄'}]
+  },
+  MoreTab: {
+    index: 0,
+    iconName: 'ios-more-outline',
+    selectedIconName: 'ios-more',
+    routes: [{key: 'Peach', title: '桃子'}]
   }
 });
 
