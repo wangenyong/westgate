@@ -31,6 +31,7 @@ const TabBar = React.createClass({
           <TabBarButton
             key={'tab-bar-button-' + route.key}
             text={route.title}
+            icon={index === this.props.currentTabIndex ? route.selectedIconName : route.iconName}
             action={() => this.props.switchTab(index)}
             isSelected={index === this.props.currentTabIndex}
           />
@@ -48,7 +49,9 @@ const styles = StyleSheet.create({
     right: 0,
     backgroundColor: '#eee',
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    borderTopWidth: 0.5,
+    borderTopColor: 'lightgrey'
   },
   buttonWrapper: {
     flex: 1,

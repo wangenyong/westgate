@@ -10,11 +10,14 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Colors from '../utils/colorUtil';
 
 export default React.createClass({
   displayName: 'TabBarButton',
   propTypes: {
     text: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
     action: PropTypes.func.isRequired,
     isSelected: PropTypes.bool.isRequired
   },
@@ -22,10 +25,10 @@ export default React.createClass({
     return (
       <TouchableOpacity
         onPress={this.props.action}
-        style={[styles.button, this.props.isSelected && styles.selected]}
+        style={[styles.button]}
         activeOpacity={1}
         >
-        <Text>{this.props.text}</Text>
+        <Icon name={this.props.icon} size={30} color={Colors.primaryColor} />
       </TouchableOpacity>
     );
   }
