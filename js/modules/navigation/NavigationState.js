@@ -1,5 +1,6 @@
 import {fromJS} from 'immutable';
 import {NavigationExperimental} from 'react-native';
+const {StateUtils: NavigationStateUtils} = NavigationExperimental;
 
 // Actions
 const PUSH_ROUTE = 'NavigationState/PUSH_ROUTE';
