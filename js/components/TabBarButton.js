@@ -28,7 +28,7 @@ export default React.createClass({
         style={[styles.button]}
         activeOpacity={1}
         >
-        <Icon name={this.props.icon} size={30} color={Colors.primaryColor} />
+        <Icon name={this.props.icon} size={30} color={this.props.isSelected?  Colors.primaryColor : 'gray'} />
       </TouchableOpacity>
     );
   }
