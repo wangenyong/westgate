@@ -75,7 +75,7 @@ const NavigationView = React.createClass({
           key={'stack_' + tabKey}
           onNavigateBack={this.props.onNavigateBack}
           navigationState={scenes}
-          renderOverlay={this.renderHeader}
+          renderHeader={this.renderHeader}
           renderScene={this.renderScene}
         />
         <TabBar
